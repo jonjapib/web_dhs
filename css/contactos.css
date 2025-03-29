@@ -1,0 +1,233 @@
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #33bd37;
+    color: white;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+}
+
+/* Logo */
+.logo img {
+    height: 125px;
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ajusta los elementos del menú en pantallas pequeñas */
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+}
+
+/* Ventana deslizable */
+.ventana-deslizable {
+    margin: 10px;
+}
+
+/* Botón ventana */
+.boton-ventana {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.boton-ventana:hover {
+    background-color: #0056b3;
+}
+
+/* Ventana emergente */
+.ventana {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    display: none; /* Las ventanas comienzan ocultas */
+}
+
+/* Estilo de los formularios */
+form input, form textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+/* Botón de acción */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* **Estilos Responsivos** */
+
+/* Para pantallas de hasta 768px (móviles y tabletas) */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column; /* Los elementos del encabezado se apilan */
+        text-align: center;
+    }
+
+    .logo img {
+        height: 100px; /* Reducir el tamaño del logo */
+    }
+
+    /* Menú de navegación */
+    nav ul {
+        flex-direction: column; /* Apilar los elementos del menú */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado entre los elementos */
+    }
+
+    /* Secciones */
+    section {
+        padding: 10px;
+    }
+
+    /* Botón ventana */
+    .boton-ventana {
+        font-size: 16px; /* Reducir tamaño de la fuente en móviles */
+    }
+
+    /* Formulario */
+    form input, form textarea {
+        width: 90%; /* Ajustar el tamaño de los formularios */
+    }
+
+    /* Botones */
+    button {
+        width: 100%; /* Los botones ocuparán todo el ancho */
+        font-size: 16px;
+    }
+
+    /* Pie de página */
+    footer {
+        font-size: 14px; /* Reducir tamaño de fuente */
+    }
+}
+
+/* Para pantallas más grandes (tabletas en orientación horizontal y laptops) */
+@media (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 1.5em;
+    }
+
+    .logo img {
+        height: 110px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+/* Sección de contacto */
+#contacto {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Contenedor del formulario */
+#contacto form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Campos del formulario */
+#contacto form input,
+#contacto form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al seleccionar un campo */
+#contacto form input:focus,
+#contacto form textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Botón */
+#contacto form button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Animación al pasar el mouse sobre el botón */
+#contacto form button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
