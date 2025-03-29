@@ -111,7 +111,7 @@ footer {
     }
 
     nav ul {
-        flex-direction: column; /* Apilar los elementos del menú */
+        flex-direction: row; /* Apilar los elementos del menú */
         align-items: center;
     }
 
