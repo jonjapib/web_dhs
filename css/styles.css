@@ -232,7 +232,7 @@ footer {
     }
 
     .text-content {
-        max-width: 100%;
+        max-width: 80%;
         text-align: center;
     }
 
@@ -241,23 +241,15 @@ footer {
     }
 
     .card {
-        width: 80%;
+        width: 70%;
         margin: 0 auto 20px;
     }
+    /*
+    .servicios {
+        max-width: 60%;
+    }*/
 
-    /* Ventanas Deslizables */
-    .ventana-deslizable {
-        margin: 5px;
-    }
 
-    .ventana {
-        padding: 10px;
-    }
-
-    /* Botones */
-    .boton-ventana {
-        font-size: 16px;
-    }
 }
 
 /* Para pantallas más grandes (tabletas y laptops) */
