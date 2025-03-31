@@ -1,10 +1,13 @@
 /* styles.css */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
+/* Header */
 header {
     background-color: #33bd37;
     color: #ffffff;
@@ -12,27 +15,37 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Asegura que se ajuste en pantallas pequeñas */
 }
+
+/* Logo */
 .logo img {
     height: 125px;
 }
+
+/* Navegación */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ajusta los elementos del menú en pantallas pequeñas */
+    justify-content: center;
 }
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
+/* Secciones */
 section {
     padding: 20px;
-}
-.ventana-deslizable {
-    margin: 10px;
 }
 
 .boton-ventana {
@@ -55,7 +68,7 @@ section {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     margin-top: 10px;
-    display: none; /* Las ventanas comienzan ocultas */
+    display: none;
 }
 
 form input, form textarea {
@@ -64,6 +77,8 @@ form input, form textarea {
     margin: 10px auto;
     padding: 10px;
 }
+
+/* Botones */
 button {
     padding: 10px 20px;
     background-color: #33bd37;
@@ -74,26 +89,32 @@ button {
 button:hover {
     background-color: #33bd37;
 }
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 10px;
     margin-top: 20px;
 }
+
+/* Contenedor */
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 50px;
+    flex-wrap: wrap; /* Adaptación para pantallas pequeñas */
 }
 
+/* Contenido de texto */
 .text-content {
     max-width: 50%;
 }
 
-.subtitulo {
-    font-size: 18px;
-    color: gray;
+
+#inicio h1 {
+    color: #000000;
 }
 
 .titulo {
@@ -102,6 +123,7 @@ footer {
     margin: 10px 0;
 }
 
+/* Energía */
 .energia {
     font-size: 18px;
     display: flex;
@@ -126,26 +148,31 @@ footer {
     background-color: #166b24;
 }
 
+/* Imagen */
 .imagen img {
     max-width: 500px;
     height: auto;
 }
+
+/* Sección de Servicios */
 .servicios {
     display: flex;
     justify-content: space-around;
     padding: 20px;
     background-color: #f8f8f8;
+    flex-wrap: wrap; /* Asegura que las tarjetas se ajusten */
 }
 
 .card {
-    display: flex;
+    display: block;
     align-items: center;
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 25%;
     gap: 15px;
+    margin-bottom: 20px;
 }
 
 .card i {
@@ -164,12 +191,143 @@ footer {
     font-size: 14px;
     color: black;
 }
+
 .info a {
     text-decoration: none;
     color: green;
     font-weight: bold;
 }
+
 .card img {
     width: 40px;
     height: 40px;
+}
+
+
+/* Medios Responsivos */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column; /* Los elementos del encabezado se apilan */
+        align-items:center;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+
+    nav ul {
+        flex-direction:row;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* Contenido */
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-content {
+        max-width: 80%;
+        text-align: center;
+    }
+
+    .imagen img {
+        max-width: 100%;
+    }
+
+    .card {
+        width: 70%;
+        margin: 0 auto 20px;
+    }
+    /*
+    .servicios {
+        max-width: 60%;
+    }*/
+
+
+}
+@media (max-width: 480px) and (orientation: landscape) {
+    .card {
+        width: 70%;
+        margin: 0 auto 20px;
+    }
+}
+@media (max-width: 844px) and (orientation: landscape) {
+    .card {
+        width: 70%;
+        margin: 0 auto 20px;
+    }
+}
+
+/* Para pantallas más grandes (tabletas y laptops) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .card {
+        width: 25%;
+        margin: 0 auto 20px;
+    }
+
+}
+@media (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 1.5em;
+    }
+
+    .logo img {
+        height: 110px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    padding: 30px 0;
+}
+
+.carousel {
+    display: flex;
+    width: 300%; /* Ajuste dinámico al número de slides */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100vw; /* Cada slide ocupa el 100% del ancho de la pantalla */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Indicadores */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #149797;
+    border-radius: 50%;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #007BFF;
 }
