@@ -294,6 +294,17 @@ nav ul li a:hover {
   }
   
   @media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 1.5em;
+    }
+
+    .logo img {
+        height: 110px; /* Ajuste del tamaño del logo */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
     .slide {
       flex-direction: row;
       text-align: left;
@@ -312,6 +323,17 @@ nav ul li a:hover {
   }
   
   @media (min-width: 1025px) {
+    header {
+        padding: 1.5em;
+    }
+
+    .logo img {
+        height: 110px; /* Ajuste del tamaño del logo */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
     .slide {
       flex-direction: row;
       justify-content: space-around;
@@ -327,16 +349,7 @@ nav ul li a:hover {
       max-width: 500px;
     }
     
-    header {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 1em 3em;
-    }
-    
-    header h1 {
-      margin: 0;
-    }
-    
+ 
     .servicios {
       padding: 4em;
     }
