@@ -1,11 +1,11 @@
-/* styles.css */
-/* Estilos generales */
+/* Estilos Generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
 
 /* Header */
 header {
@@ -18,299 +18,330 @@ header {
     flex-wrap: wrap; /* Asegura que se ajuste en pantallas pequeñas */
 }
 
-/* Logo */
 .logo img {
     height: 125px;
 }
 
-/* Navegación */
+header h1 {
+    margin: 0 0 15px 0;
+    font-size: 1.8em;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Ajusta los elementos del menú en pantallas pequeñas */
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    gap: 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-/* Secciones */
-section {
-    padding: 20px;
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.2);
 }
-
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-/* Contenedor */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    flex-wrap: wrap; /* Adaptación para pantallas pequeñas */
-}
-
-/* Contenido de texto */
-.text-content {
-    max-width: 50%;
-}
-
-
-#inicio h1 {
-    color: #000000;
-}
-
-.titulo {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-/* Energía */
-.energia {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-.energia span {
-    margin-right: 5px;
-}
-
-.boton {
-    background-color: #1e8b2e;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.boton:hover {
-    background-color: #166b24;
-}
-
-/* Imagen */
-.imagen img {
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    
-}
-
-/* Sección de Servicios */
-.servicios {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f8f8f8;
-    flex-wrap: wrap; /* Asegura que las tarjetas se ajusten */
-}
-
-.card {
-    display: block;
-    align-items: center;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.card i {
-    font-size: 30px;
-    color: green;
-}
-
-.info h3 {
-    margin: 0;
-    font-size: 16px;
-    color: green;
-}
-
-.info p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: black;
-}
-
-.info a {
-    text-decoration: none;
-    color: green;
-    font-weight: bold;
-}
-
-.card img {
-    width: 40px;
-    height: 40px;
-}
-
-
-.carousel-container {
+  
+  /* Sección de inicio */
+  #inicio {
+    padding: 4em 2em;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  }
+  
+  #inicio h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #33bd37;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #inicio h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #33bd37;
+  }
+  
+  /* Carrusel */
+  .carousel-container {
     width: 100%;
     overflow: hidden;
     position: relative;
+    padding: 3em 0;
     background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-    padding: 30px 0;
-}
-
-.carousel {
+  }
+  
+  .carousel {
     display: flex;
-    width: 300%; /* Ajuste dinámico al número de slides */
+    width: 300%;
     transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    width: 100vw; /* Cada slide ocupa el 100% del ancho de la pantalla */
+  }
+  
+  .slide {
+    width: 100vw;
     flex-shrink: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: center;
+    padding: 2em;
     box-sizing: border-box;
-}
-
-/* Indicadores */
-.dots-container {
+    gap: 2em;
+  }
+  
+  .slide .text-content {
+    max-width: 800px;
     text-align: center;
-    margin-top: 10px;
-}
-
-.dot {
-    display: inline-block;
+  }
+  
+  .slide .titulo {
+    font-size: 2.2em;
+    color: #33bd37;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+  }
+  
+  .slide .energia {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 1.5em;
+  }
+  
+  .slide .imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .slide .imagen img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Indicadores del carrusel */
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+    gap: 0.8em;
+  }
+  
+  .dot {
     width: 12px;
     height: 12px;
-    margin: 5px;
-    background-color: #149797;
+    background-color: #ccc;
     border-radius: 50%;
-    transition: background 0.5s;
     cursor: pointer;
-}
-
-.dot.active {
-    background-color: #007BFF;
-}
-/*icono whatsaap*/
-.float-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #33bd37;
+    transform: scale(1.2);
+  }
+  
+  /* Sección de servicios */
+  .servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding: 4em 2em;
+    background-color: #ffffff;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2em;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  .card i {
+    font-size: 3em;
+    color: #33bd37;
+    margin-bottom: 1.5em;
+  }
+  
+  .card .info h3 {
+    font-size: 1.5em;
+    color: #33bd37;
+    margin-bottom: 1em;
+  }
+  
+  .card .info p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 1.5em;
+  }
+  
+  .card img {
     width: 60px;
     height: 60px;
-    background: #25D366; /* Color de WhatsApp */
-    color: white;
+    margin-bottom: 1.5em;
+    transition: all 0.3s ease;
+  }
+  
+  .card img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Botón de WhatsApp flotante */
+  .float-whatsapp {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: #ffffff;
     border-radius: 50%;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 1.8em;
     text-decoration: none;
-    transition: all 0.3s;
- }
- 
- .float-whatsapp:hover {
-    background: #128C7E; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.1);
- }
- 
- .icon-whatsapp::before {
-    content: "💬"; /* Emoji o icono de WhatsApp */
-    /* Si usas Font Awesome: <i class="fab fa-whatsapp"></i> */
- }
-@media (max-width: 768px) {
-    /* Header */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 99;
+    transition: all 0.3s ease;
+  }
+  
+  .float-whatsapp:hover {
+    background: #128C7E;
+    transform: scale(1.1) translateY(-5px);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 2em;
+    margin-top: 2em;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Los elementos del encabezado se apilan */
-        align-items:center;
+      padding: 1em;
     }
-
+    
     .logo img {
-        height: 100px;
+      height: 80px;
     }
-
+    
+    header h1 {
+      font-size: 1.5em;
+      margin: 0.5em 0;
+    }
+    
     nav ul {
-        flex-direction:row;
+      gap: 0.8em;
     }
-
-    nav ul li {
-        margin: 5px 0;
+    
+    nav ul li a {
+      padding: 0.3em 0.6em;
+      font-size: 0.9em;
     }
-
-    /* Contenido */
-    .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    
+    #inicio h1 {
+      font-size: 2em;
     }
-
-    .text-content {
-        max-width: 80%;
-        text-align: center;
+    
+    .slide .titulo {
+      font-size: 1.8em;
     }
-
-    .imagen img {
-        max-width: 100%;
+    
+    .slide .energia {
+      font-size: 1em;
     }
-
+    
+    .servicios {
+      padding: 2em 1em;
+      gap: 1.5em;
+    }
+    
     .card {
-        width: 70%;
-        margin: 0 auto 20px;
+      padding: 1.5em;
     }
-}
-@media (max-width: 480px) and (orientation: landscape) {
-    .card {
-        width: 70%;
-        margin: 0 auto 20px;
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .slide {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-around;
+      padding: 2em 4em;
     }
-}
-@media (max-width: 844px) and (orientation: landscape) {
-    .card {
-        width: 70%;
-        margin: 0 auto 20px;
+    
+    .slide .text-content {
+      max-width: 45%;
+      text-align: left;
     }
-}
-
-/* Para pantallas más grandes (tabletas y laptops) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .card {
-        width: 25%;
-        margin: 0 auto 20px;
+    
+    .slide .imagen img {
+      max-width: 400px;
     }
-
-}
-@media (max-width: 1024px) {
-    /* Header */
+  }
+  
+  @media (min-width: 1025px) {
+    .slide {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 2em 6em;
+    }
+    
+    .slide .text-content {
+      max-width: 45%;
+      text-align: left;
+    }
+    
+    .slide .imagen img {
+      max-width: 500px;
+    }
+    
     header {
-        padding: 1.5em;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1em 3em;
     }
-
-    .logo img {
-        height: 110px;
+    
+    header h1 {
+      margin: 0;
     }
-
-    nav ul li {
-        margin: 0 10px;
+    
+    .servicios {
+      padding: 4em;
     }
-}
+  }
