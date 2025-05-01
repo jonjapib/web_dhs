@@ -46,9 +46,7 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255,255,255,0.2);
-}
+
   
   /* Sección de inicio */
   #inicio {
@@ -247,9 +245,12 @@ nav ul li a:hover {
     margin-top: 2em;
   }
   
-  footer p {
-    margin: 0;
-  }
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
   
   /* Media Queries */
   @media (max-width: 768px) {

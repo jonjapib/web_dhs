@@ -46,6 +46,12 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
 
 
 /* Sección de Servicios Principal */
