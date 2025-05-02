@@ -69,40 +69,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Carrusel
-    const carousel = document.querySelector('.carousel');
-    const slides = document.querySelectorAll('.slide');
-    const dotsContainer = document.querySelector('.dots-container');
-    let currentIndex = 0;
+    //const carousel = document.querySelector('.carousel');
+    //const slides = document.querySelectorAll('.slide');
+    //const dotsContainer = document.querySelector('.dots-container');
+   // let currentIndex = 0;
     
     // Crear indicadores
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
+    //slides.forEach((_, index) => {
+    //    const dot = document.createElement('div');
+    //    dot.classList.add('dot');
+    //    if (index === 0) dot.classList.add('active');
+    //    dot.addEventListener('click', () => goToSlide(index));
+    //    dotsContainer.appendChild(dot);
+    //});
     
     // Función para cambiar de slide
-    function goToSlide(index) {
-        currentIndex = index;
-        updateCarousel();
-    }
+   // function goToSlide(index) {
+   //     currentIndex = index;
+   //     updateCarousel();
+    //}
     
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    //function updateCarousel() {
+    //    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
         
         // Actualizar indicadores
-        document.querySelectorAll('.dot').forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
-        });
-    }
+    //    document.querySelectorAll('.dot').forEach((dot, index) => {
+    //        dot.classList.toggle('active', index === currentIndex);
+    //    });
+   // }
     
     // Autoavance del carrusel
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarousel();
-    }, 5000);
+    //setInterval(() => {
+    //    currentIndex = (currentIndex + 1) % slides.length;
+    //    updateCarousel();
+   // }, 5000);
     
     // Cerrar menú al hacer clic en un enlace (para móviles)
     document.querySelectorAll('.nav-menu a').forEach(link => {
