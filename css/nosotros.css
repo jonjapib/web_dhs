@@ -127,6 +127,22 @@ footer {
 }
 /* Responsive */
 @media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column; /* Los elementos se apilan */
+        text-align: center;
+    }
+
+    .logo img {
+        height: 100px; /* Reducir tamaño de logo */
+    }
+
+    /* Menú de navegación */
+    nav ul {
+        flex-direction: row; /* Apilar los elementos del menú */
+    }
+
+ 
     .contenedor-nosotros {
         padding: 15px;
     }

@@ -393,7 +393,20 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 1.5em;
+    }
+
+    .logo img {
+        height: 110px; /* Ajuste del tamaño del logo */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
     }

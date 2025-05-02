@@ -254,6 +254,7 @@ nav ul li a {
   
   /* Media Queries */
   @media (max-width: 768px) {
+    /* Header */
     header {
         flex-direction: column; /* Los elementos se apilan */
         text-align: center;
@@ -270,6 +271,11 @@ nav ul li a {
 
     nav ul li {
         margin: 10px 0; /* Añadir espacio entre los elementos */
+    }
+
+    /* Pie de página */
+    footer {
+        font-size: 14px; /* Reducir tamaño de fuente */
     }
     
     #inicio h1 {
@@ -294,7 +300,8 @@ nav ul li a {
     }
   }
   
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
+    /* Header */
     header {
         padding: 1.5em;
     }
@@ -323,35 +330,3 @@ nav ul li a {
     }
   }
   
-  @media (min-width: 1025px) {
-    header {
-        padding: 1.5em;
-    }
-
-    .logo img {
-        height: 110px; /* Ajuste del tamaño del logo */
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-    .slide {
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 2em 6em;
-    }
-    
-    .slide .text-content {
-      max-width: 45%;
-      text-align: left;
-    }
-    
-    .slide .imagen img {
-      max-width: 500px;
-    }
-    
- 
-    .servicios {
-      padding: 4em;
-    }
-  }
