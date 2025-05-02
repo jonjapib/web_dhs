@@ -55,7 +55,7 @@ nav ul li a {
 #inicio h1 {
     font-size: 2.5em;
     margin-bottom: 1em;
-    color: #33bd37;
+    color: #000000;
     position: relative;
     display: inline-block;
 }
@@ -261,22 +261,24 @@ footer {
 @media (max-width: 768px) {
     /* Header */
     header {
-        flex-direction: column;
-        text-align: center;
+        padding: 1.5em;
     }
 
     .logo img {
-        height: 100px;
+        height: 110px; /* Ajuste del tamaño del logo */
     }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
 
     /* Menú de navegación */
     nav ul {
         flex-direction: row;
     }
 
-    nav ul li {
-        margin: 10px 0;
-    }
+ 
 
     /* Pie de página */
     footer {
@@ -324,27 +326,30 @@ footer {
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+
+@media (max-width: 768px) {
     /* Header */
     header {
-        padding: 1.5em;
+        flex-direction: column; /* Los elementos se apilan */
+        text-align: center;
     }
 
     .logo img {
-        height: 110px;
+        height: 100px; /* Reducir tamaño de logo */
+    }
+
+    /* Menú de navegación */
+    nav ul {
+        flex-direction: row; /* Apilar los elementos del menú */
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 10px 0; /* Añadir espacio entre los elementos */
     }
-    
-    /* Carrusel en tabletas */
-    .slide {
-        padding: 2em 3em;
-        gap: 3em;
-    }
-    
-    .slide .imagen img {
-        max-height: 300px;
+
+    /* Pie de página */
+    footer {
+        font-size: 14px; /* Reducir tamaño de fuente */
     }
 }
+
