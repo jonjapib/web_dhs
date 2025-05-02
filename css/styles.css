@@ -6,7 +6,6 @@ body {
     text-align: center;
 }
 
-
 /* Header */
 header {
     background-color: #33bd37;
@@ -15,7 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Asegura que se ajuste en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -46,24 +45,22 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-
-  
-  /* Sección de inicio */
-  #inicio {
+/* Sección de inicio */
+#inicio {
     padding: 4em 2em;
     text-align: center;
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-  }
-  
-  #inicio h1 {
+}
+
+#inicio h1 {
     font-size: 2.5em;
     margin-bottom: 1em;
     color: #33bd37;
     position: relative;
     display: inline-block;
-  }
-  
-  #inicio h1::after {
+}
+
+#inicio h1::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -72,98 +69,106 @@ nav ul li a {
     width: 80px;
     height: 4px;
     background-color: #33bd37;
-  }
-  
-  /* Carrusel */
-  .carousel-container {
+}
+
+/* Carrusel - Versión mejorada */
+.carousel-container {
     width: 100%;
     overflow: hidden;
     position: relative;
     padding: 3em 0;
     background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-  }
-  
-  .carousel {
+}
+
+.carousel {
     display: flex;
     width: 300%;
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
+}
+
+.slide {
     width: 100vw;
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: 2em 5%;
     box-sizing: border-box;
-    gap: 2em;
-  }
-  
-  .slide .text-content {
-    max-width: 800px;
-    text-align: center;
-  }
-  
-  .slide .titulo {
+    gap: 4em;
+}
+
+.slide .text-content {
+    max-width: 45%;
+    text-align: left;
+}
+
+.slide .titulo {
     font-size: 2.2em;
     color: #33bd37;
     margin-bottom: 0.5em;
     line-height: 1.2;
-  }
-  
-  .slide .energia {
+}
+
+.slide .energia {
     font-size: 1.2em;
     color: #333;
     margin-bottom: 1.5em;
-  }
-  
-  .slide .imagen img {
-    max-width: 100%;
+    line-height: 1.6;
+}
+
+.slide .imagen {
+    width: 45%;
+    max-width: 500px;
+}
+
+.slide .imagen img {
+    width: 100%;
     height: auto;
+    max-height: 350px;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-  }
-  
-  .slide .imagen img:hover {
+}
+
+.slide .imagen img:hover {
     transform: scale(1.02);
-  }
-  
-  /* Indicadores del carrusel */
-  .dots-container {
+}
+
+/* Indicadores del carrusel */
+.dots-container {
     display: flex;
     justify-content: center;
     margin-top: 1.5em;
     gap: 0.8em;
-  }
-  
-  .dot {
+}
+
+.dot {
     width: 12px;
     height: 12px;
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .dot.active {
+}
+
+.dot.active {
     background-color: #33bd37;
     transform: scale(1.2);
-  }
-  
-  /* Sección de servicios */
-  .servicios {
+}
+
+/* Sección de servicios */
+.servicios {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2em;
     padding: 4em 2em;
     background-color: #ffffff;
-  }
-  
-  .card {
+}
+
+.card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -175,44 +180,44 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  }
-  
-  .card i {
+}
+
+.card i {
     font-size: 3em;
     color: #33bd37;
     margin-bottom: 1.5em;
-  }
-  
-  .card .info h3 {
+}
+
+.card .info h3 {
     font-size: 1.5em;
     color: #33bd37;
     margin-bottom: 1em;
-  }
-  
-  .card .info p {
+}
+
+.card .info p {
     font-size: 1em;
     color: #333;
     margin-bottom: 1.5em;
-  }
-  
-  .card img {
+}
+
+.card img {
     width: 60px;
     height: 60px;
     margin-bottom: 1.5em;
     transition: all 0.3s ease;
-  }
-  
-  .card img:hover {
+}
+
+.card img:hover {
     transform: scale(1.1);
-  }
-  
-  /* Botón de WhatsApp flotante */
-  .float-whatsapp {
+}
+
+/* Botón de WhatsApp flotante */
+.float-whatsapp {
     position: fixed;
     bottom: 2em;
     right: 2em;
@@ -229,104 +234,117 @@ nav ul li a {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     z-index: 99;
     transition: all 0.3s ease;
-  }
-  
-  .float-whatsapp:hover {
+}
+
+.float-whatsapp:hover {
     background: #128C7E;
     transform: scale(1.1) translateY(-5px);
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     background-color: #333;
     color: #ffffff;
     text-align: center;
     padding: 2em;
     margin-top: 2em;
-  }
-  
-  footer {
+}
+
+footer {
     background-color: #333;
     color: white;
     padding: 10px;
     margin-top: 20px;
 }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
+
+/* Media Queries */
+@media (max-width: 768px) {
     /* Header */
     header {
-        flex-direction: column; /* Los elementos se apilan */
+        flex-direction: column;
         text-align: center;
     }
 
     .logo img {
-        height: 100px; /* Reducir tamaño de logo */
+        height: 100px;
     }
 
     /* Menú de navegación */
     nav ul {
-        flex-direction: row; /* Apilar los elementos del menú */
+        flex-direction: row;
     }
 
     nav ul li {
-        margin: 10px 0; /* Añadir espacio entre los elementos */
+        margin: 10px 0;
     }
 
     /* Pie de página */
     footer {
-        font-size: 14px; /* Reducir tamaño de fuente */
+        font-size: 14px;
     }
     
     #inicio h1 {
-      font-size: 2em;
+        font-size: 2em;
+    }
+    
+    /* Carrusel en móviles */
+    .slide {
+        flex-direction: column;
+        padding: 2em;
+        gap: 2em;
+    }
+    
+    .slide .text-content,
+    .slide .imagen {
+        max-width: 100%;
+        width: 100%;
     }
     
     .slide .titulo {
-      font-size: 1.8em;
+        font-size: 1.8em;
+        text-align: center;
     }
     
     .slide .energia {
-      font-size: 1em;
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    .slide .imagen img {
+        max-height: 250px;
     }
     
     .servicios {
-      padding: 2em 1em;
-      gap: 1.5em;
+        padding: 2em 1em;
+        gap: 1.5em;
     }
     
     .card {
-      padding: 1.5em;
+        padding: 1.5em;
     }
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
     /* Header */
     header {
         padding: 1.5em;
     }
 
     .logo img {
-        height: 110px; /* Ajuste del tamaño del logo */
+        height: 110px;
     }
 
     nav ul li {
         margin: 0 10px;
     }
-    .slide {
-      flex-direction: row;
-      text-align: left;
-      justify-content: space-around;
-      padding: 2em 4em;
-    }
     
-    .slide .text-content {
-      max-width: 45%;
-      text-align: left;
+    /* Carrusel en tabletas */
+    .slide {
+        padding: 2em 3em;
+        gap: 3em;
     }
     
     .slide .imagen img {
-      max-width: 400px;
+        max-height: 300px;
     }
-  }
-  
+}
