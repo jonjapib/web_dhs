@@ -1,4 +1,3 @@
-/* styles.css */
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -15,147 +14,58 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ajuste para pantallas más pequeñas */
+    flex-wrap: wrap;
 }
 
-/* Logo */
 .logo img {
     height: 125px;
 }
 
-/* Menú de navegación */
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    flex-grow: 1;
+}
+
+/* Menú de navegación para desktop */
+nav {
+    display: block;
+    width: auto;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Ajuste para pantallas pequeñas */
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    gap: 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-/* Pie de página */
-footer {
-    background-color: #333;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón hamburguesa - Oculto por defecto */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
     color: white;
+    font-size: 1.8em;
+    cursor: pointer;
     padding: 10px;
-    margin-top: 20px;
 }
 
-/* **Estilos Responsivos** */
-
-/* Para pantallas de hasta 768px (móviles y tabletas) */
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        flex-direction: column; /* Los elementos se apilan */
-        text-align: center;
-    }
-
-    .logo img {
-        height: 100px; /* Reducir tamaño de logo */
-    }
-
-    /* Menú de navegación */
-    nav ul {
-        flex-direction: row; /* Apilar los elementos del menú */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Añadir espacio entre los elementos */
-    }
-
-    /* Pie de página */
-    footer {
-        font-size: 14px; /* Reducir tamaño de fuente */
-    }
-}
-/*icono whatsaap*/
-.float-whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: #25D366; /* Color de WhatsApp */
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    text-decoration: none;
-    transition: all 0.3s;
- }
- 
- .float-whatsapp:hover {
-    background: #128C7E; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.1);
- }
- 
- .icon-whatsapp::before {
-    content: "💬"; /* Emoji o icono de WhatsApp */
-    /* Si usas Font Awesome: <i class="fab fa-whatsapp"></i> */
- }
-
-/* Para pantallas más grandes (tabletas y laptops) */
-@media (max-width: 1024px) {
-    /* Header */
-    header {
-        padding: 1.5em;
-    }
-
-    .logo img {
-        height: 110px; /* Ajuste del tamaño del logo */
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-}
-/* Responsive */
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        flex-direction: column; /* Los elementos se apilan */
-        text-align: center;
-    }
-
-    .logo img {
-        height: 100px; /* Reducir tamaño de logo */
-    }
-
-    /* Menú de navegación */
-    nav ul {
-        flex-direction: row; /* Apilar los elementos del menú */
-    }
-
- 
-    .contenedor-nosotros {
-        padding: 15px;
-    }
-
-    #nosotros h2 {
-        font-size: 24px;
-    }
-
-    #nosotros p {
-        font-size: 16px;
-    }
-}
-/* Sección Sobre Nosotros */
+/* Sección Nosotros */
 #nosotros {
     background-color: #f5f5f5;
     padding: 50px 20px;
@@ -182,11 +92,126 @@ footer {
     color: #333;
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: left;
 }
 
 #nosotros strong {
-    color: #007BFF;
+    color: #33bd37;
 }
 
+/* Botón de WhatsApp flotante */
+.float-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
 
+.float-whatsapp:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+}
 
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Media Queries - Solo para móviles/tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5em 1em;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.3em;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    /* Ocultar menú normal */
+    nav {
+        display: none;
+        width: 100%;
+        order: 4;
+    }
+
+    /* Mostrar menú cuando tiene clase active */
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Ajustes de contenido */
+    .contenedor-nosotros {
+        padding: 15px;
+    }
+
+    #nosotros h2 {
+        font-size: 24px;
+    }
+
+    #nosotros p {
+        font-size: 16px;
+    }
+
+    .float-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1em;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+}

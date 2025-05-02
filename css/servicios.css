@@ -6,7 +6,6 @@ body {
     text-align: center;
 }
 
-
 /* Header */
 header {
     background-color: #33bd37;
@@ -15,7 +14,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Asegura que se ajuste en pantallas pequeñas */
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .logo img {
@@ -25,6 +25,23 @@ header {
 header h1 {
     margin: 0 0 15px 0;
     font-size: 1.8em;
+}
+
+/* Menú Hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    display: none; /* Oculto por defecto en desktop */
+    padding: 10px;
+    order: 3; /* Posiciona el botón al final */
+}
+
+.nav-menu {
+    display: flex;
+    transition: all 0.3s ease;
 }
 
 nav ul {
@@ -46,13 +63,17 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 10px;
     margin-top: 20px;
 }
-
 
 /* Sección de Servicios Principal */
 #servicios {
@@ -325,41 +346,59 @@ footer {
     margin-top: 50px;
 }
 
-
-@media (max-width: 1024px) {
-    /* Header */
-    header {
-        padding: 1.5em;
-    }
-
-    .logo img {
-        height: 110px; /* Ajuste del tamaño del logo */
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-}
-/* Responsive Design */
+/* Media Queries para el menú hamburguesa */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Los elementos se apilan */
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5em 1em;
     }
 
     .logo img {
-        height: 100px; /* Reducir tamaño de logo */
+        height: 80px;
     }
 
-    /* Menú de navegación */
+    header h1 {
+        font-size: 1.3em;
+        margin: 0;
+        flex-grow: 1;
+        text-align: center;
+        order: 2;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        order: 4;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
     nav ul {
-        flex-direction: row; /* Apilar los elementos del menú */
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
     }
 
     nav ul li {
-        margin: 10px 0; /* Añadir espacio entre los elementos */
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 0;
     }
-    
+
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Ajustes adicionales para móviles */
     #servicios h1 {
         font-size: 1.8em;
     }
@@ -393,18 +432,13 @@ footer {
     }
 }
 
-@media (max-width: 1024px) {
-    /* Header */
-    header {
-        padding: 1.5em;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1em;
     }
-
+    
     .logo img {
-        height: 110px; /* Ajuste del tamaño del logo */
-    }
-
-    nav ul li {
-        margin: 0 10px;
+        height: 60px;
     }
 
     .services-grid {
@@ -414,19 +448,14 @@ footer {
     .step {
         min-width: 100px;
     }
-    
-    .contenedor-dialux h1,
-    .contenedor-As-Built h1,
-    .contenedor-construccion h1 {
-        font-size: 1.6em;
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
     
-    .highlight li {
-        padding-left: 25px;
-    }
-    
-    .highlight li::before {
-        font-size: 20px;
-        top: -1px;
+    .nav-menu {
+        display: flex !important;
     }
 }

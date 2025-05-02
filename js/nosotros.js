@@ -24,37 +24,21 @@ function mostrarVentana(id) {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".slide");
-    const carousel = document.querySelector(".carousel");
-    const dotsContainer = document.querySelector(".dots-container");
-    let index = 0;
-    const totalSlides = slides.length;
 
-    // Crear indicadores
-    slides.forEach((_, i) => {
-        let dot = document.createElement("div");
-        dot.classList.add("dot");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => moveToSlide(i));
-        dotsContainer.appendChild(dot);
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav');
+    
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
     });
 
-    const dots = document.querySelectorAll(".dot");
-
-    function moveToSlide(newIndex) {
-        index = newIndex;
-        let offset = -index * 100; // Mueve el carrusel horizontalmente
-        carousel.style.transform = `translateX(${offset}vw)`;
-
-        // Actualizar puntos activos
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
-    }
-
-    // Cambio automático de slides cada 3 segundos
-    setInterval(() => {
-        let nextIndex = (index + 1) % totalSlides;
-        moveToSlide(nextIndex);
-    }, 3000);
+    // Cerrar menú al hacer clic en un enlace (para móviles)
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
 });

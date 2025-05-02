@@ -1,4 +1,3 @@
-/* Estilos Generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,6 +14,7 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .logo img {
@@ -24,6 +24,16 @@ header {
 header h1 {
     margin: 0 0 15px 0;
     font-size: 1.8em;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
 }
 
 nav ul {
@@ -43,6 +53,10 @@ nav ul li a {
     padding: 5px 10px;
     border-radius: 4px;
     transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Sección de inicio */
@@ -250,35 +264,53 @@ footer {
     margin-top: 2em;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-}
-
 /* Media Queries */
 @media (max-width: 768px) {
     /* Header */
     header {
-        padding: 1.5em;
+        flex-direction: row;
+        text-align: left;
+        padding: 0.5em 1em;
     }
 
     .logo img {
-        height: 110px; /* Ajuste del tamaño del logo */
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.3em;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
     }
 
     nav ul li {
-        margin: 0 10px;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em 0;
     }
 
-
-    /* Menú de navegación */
-    nav ul {
-        flex-direction: row;
+    nav ul li a {
+        display: block;
+        padding: 10px 0;
     }
-
- 
 
     /* Pie de página */
     footer {
@@ -326,30 +358,12 @@ footer {
     }
 }
 
-
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        flex-direction: column; /* Los elementos se apilan */
-        text-align: center;
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1em;
     }
-
+    
     .logo img {
-        height: 100px; /* Reducir tamaño de logo */
-    }
-
-    /* Menú de navegación */
-    nav ul {
-        flex-direction: row; /* Apilar los elementos del menú */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Añadir espacio entre los elementos */
-    }
-
-    /* Pie de página */
-    footer {
-        font-size: 14px; /* Reducir tamaño de fuente */
+        height: 60px;
     }
 }
-
