@@ -1,333 +1,122 @@
-/* styles.css */
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domotic House and Security</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilos adicionales para la sección del PDF */
+        .pdf-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        
+        .pdf-description {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .pdf-description h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .pdf-description p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .pdf-viewer-container {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+        
+        .download-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .download-link:hover {
+            background: #1a252f;
+        }
+        
+        @media (max-width: 768px) {
+            .pdf-section {
+                flex-direction: column;
+            }
+            
+            .pdf-description, .pdf-viewer-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Resto del código existente... -->
 
-/* Header */
-header {
-    background-color: #33bd37;
-    color: #ffffff;
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Asegura que se ajuste en pantallas pequeñas */
-}
+    <section class="pdf-section">
+        <div class="pdf-description">
+            <h2>Modelo de Casa Tipo Adrián</h2>
+            <p>Nuestros planos As-Built representan la combinación perfecta entre funcionalidad y diseño arquitectónico moderno.</p>
+            
+            <p>El modelo Adrián incluye:</p>
+            <ul>
+                <li>Diseño de 3 habitaciones con baño principal</li>
+                <li>Sala-comedor integrada de 35m²</li>
+                <li>Cocina moderna con isla central</li>
+                <li>Terraza cubierta de 15m²</li>
+                <li>Garaje para 2 vehículos</li>
+            </ul>
+            
+            <p>Este plano incluye toda la documentación técnica necesaria para construcción, con especificaciones eléctricas, sanitarias y estructurales detalladas.</p>
+            
+            <a href="/image/Casa tipo Adrian.pdf" class="download-link" download>
+                <i class="fas fa-download"></i> Descargar PDF completo
+            </a>
+        </div>
+        
+        <div class="pdf-viewer-container">
+            <iframe 
+                src="/image/Casa tipo Adrian.pdf" 
+                class="pdf-viewer"
+                allowfullscreen
+            >
+                <p>Tu navegador no soporta la visualización de PDFs. 
+                <a href="/image/Casa tipo Adrian.pdf">Descarga el PDF</a> para verlo.</p>
+            </iframe>
+        </div>
+    </section>
 
-/* Logo */
-.logo img {
-    height: 125px;
-}
-
-/* Navegación */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap; /* Ajusta los elementos del menú en pantallas pequeñas */
-    justify-content: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Secciones */
-section {
-    padding: 20px;
-}
-
-.boton-ventana {
-    padding: 10px;
-    background-color: #33bd37;
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    font-size: 18px;
-}
-
-.boton-ventana:hover {
-    background-color: #33bd37;
-}
-
-.ventana {
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    display: none;
-}
-
-form input, form textarea {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
-    padding: 10px;
-}
-
-/* Botones */
-button {
-    padding: 10px 20px;
-    background-color: #33bd37;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #33bd37;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
-}
-
-/* Contenedor */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    flex-wrap: wrap; /* Adaptación para pantallas pequeñas */
-}
-
-/* Contenido de texto */
-.text-content {
-    max-width: 50%;
-}
-
-
-#inicio h1 {
-    color: #000000;
-}
-
-.titulo {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-/* Energía */
-.energia {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-.energia span {
-    margin-right: 5px;
-}
-
-.boton {
-    background-color: #1e8b2e;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.boton:hover {
-    background-color: #166b24;
-}
-
-/* Imagen */
-.imagen img {
-    max-width: 500px;
-    height: auto;
-}
-
-/* Sección de Servicios */
-.servicios {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f8f8f8;
-    flex-wrap: wrap; /* Asegura que las tarjetas se ajusten */
-}
-
-.card {
-    display: block;
-    align-items: center;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.card i {
-    font-size: 30px;
-    color: green;
-}
-
-.info h3 {
-    margin: 0;
-    font-size: 16px;
-    color: green;
-}
-
-.info p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: black;
-}
-
-.info a {
-    text-decoration: none;
-    color: green;
-    font-weight: bold;
-}
-
-.card img {
-    width: 40px;
-    height: 40px;
-}
-
-
-/* Medios Responsivos */
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        flex-direction: column; /* Los elementos del encabezado se apilan */
-        align-items:center;
-    }
-
-    .logo img {
-        height: 100px;
-    }
-
-    nav ul {
-        flex-direction:row;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    /* Contenido */
-    .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .text-content {
-        max-width: 80%;
-        text-align: center;
-    }
-
-    .imagen img {
-        max-width: 100%;
-    }
-
-    .card {
-        width: 70%;
-        margin: 0 auto 20px;
-    }
-    /*
-    .servicios {
-        max-width: 60%;
-    }*/
-
-
-}
-@media (max-width: 480px) and (orientation: landscape) {
-    .card {
-        width: 70%;
-        margin: 0 auto 20px;
-    }
-}
-@media (max-width: 844px) and (orientation: landscape) {
-    .card {
-        width: 70%;
-        margin: 0 auto 20px;
-    }
-}
-
-/* Para pantallas más grandes (tabletas y laptops) */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .card {
-        width: 25%;
-        margin: 0 auto 20px;
-    }
-
-}
-@media (max-width: 1024px) {
-    /* Header */
-    header {
-        padding: 1.5em;
-    }
-
-    .logo img {
-        height: 110px;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-}
-
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-    padding: 30px 0;
-}
-
-.carousel {
-    display: flex;
-    width: 300%; /* Ajuste dinámico al número de slides */
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    width: 100vw; /* Cada slide ocupa el 100% del ancho de la pantalla */
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Indicadores */
-.dots-container {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 5px;
-    background-color: #149797;
-    border-radius: 50%;
-    transition: background 0.5s;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #007BFF;
-}
+    <!-- Resto del código existente... -->
+</body>
+</html>
