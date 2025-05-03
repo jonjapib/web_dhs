@@ -528,6 +528,6 @@ footer {
     }
     
     .pdf-description, .pdf-viewer-container {
-        width: 100%;
+        width: 90%;
     }
 }
