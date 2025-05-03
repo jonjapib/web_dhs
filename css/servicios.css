@@ -473,7 +473,7 @@ footer {
 
 .pdf-description {
     flex: 1;
-    min-width: 300px;
+    min-width: 250px;
     background: #51c072;
     padding: 25px;
     border-radius: 8px;
