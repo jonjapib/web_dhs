@@ -154,7 +154,10 @@ footer {
 /* Secciones de servicios individuales */
 section[id^="dialux"],
 section[id^="As-Built"],
-section[id^="construccion"] {
+section[id^="construccion"], 
+section[id^="electricas"],
+section[id^="cctv"]
+{
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -162,14 +165,18 @@ section[id^="construccion"] {
 
 .contenedor-dialux,
 .contenedor-As-Built,
-.contenedor-construccion {
+.contenedor-construccion,
+.contenedor-electricas,
+.contenedor-cctv {
     text-align: center;
     margin-bottom: 40px;
 }
 
 .contenedor-dialux h1,
 .contenedor-As-Built h1,
-.contenedor-construccion h1 {
+.contenedor-construccion h1,
+.contenedor-electricas h1,
+.contenedor-cctv h1{
     font-size: 2em;
     color: #33bd37;
     margin-bottom: 20px;
@@ -180,7 +187,9 @@ section[id^="construccion"] {
 
 .contenedor-dialux h3,
 .contenedor-As-Built h3,
-.contenedor-construccion h3 {
+.contenedor-construccion h3 
+.contenedor-electricas h3
+.contenedor-cctv h3{
     font-size: 1.4em;
     color: #555;
     margin-bottom: 20px;
@@ -188,7 +197,9 @@ section[id^="construccion"] {
 
 .contenedor-dialux p,
 .contenedor-As-Built p,
-.contenedor-construccion p {
+.contenedor-construccion p,
+.contenedor-electricas p,
+.contenedor-cctv p {
     text-align: justify;
     max-width: 800px;
     margin: 0 auto 20px;
