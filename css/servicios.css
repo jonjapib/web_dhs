@@ -156,7 +156,8 @@ section[id^="dialux"],
 section[id^="As-Built"],
 section[id^="construccion"], 
 section[id^="electricas"],
-section[id^="cctv"]
+section[id^="cctv"],
+section[id^="domotica"]
 {
     padding: 60px 20px;
     max-width: 1200px;
@@ -167,7 +168,8 @@ section[id^="cctv"]
 .contenedor-As-Built,
 .contenedor-construccion,
 .contenedor-electricas,
-.contenedor-cctv {
+.contenedor-cctv,
+.contenedor-domotica {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -176,7 +178,8 @@ section[id^="cctv"]
 .contenedor-As-Built h1,
 .contenedor-construccion h1,
 .contenedor-electricas h1,
-.contenedor-cctv h1{
+.contenedor-cctv h1,
+.contenedor-domotica h1{
     font-size: 2em;
     color: #33bd37;
     margin-bottom: 20px;
@@ -189,7 +192,8 @@ section[id^="cctv"]
 .contenedor-As-Built h3,
 .contenedor-construccion h3 
 .contenedor-electricas h3
-.contenedor-cctv h3{
+.contenedor-cctv h3,
+.contenedor-domotica h3{
     font-size: 1.4em;
     color: #555;
     margin-bottom: 20px;
@@ -199,7 +203,8 @@ section[id^="cctv"]
 .contenedor-As-Built p,
 .contenedor-construccion p,
 .contenedor-electricas p,
-.contenedor-cctv p {
+.contenedor-cctv p,
+.contenedor-domotica p {
     text-align: justify;
     max-width: 800px;
     margin: 0 auto 20px;
@@ -469,4 +474,39 @@ footer {
     .nav-menu {
         display: flex !important;
     }
+}
+/*ff*/
+/* Agregar al archivo CSS existente */
+.scenes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.scene-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.scene-card:hover {
+    transform: translateY(-5px);
+}
+
+.scene-card h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.scene-card p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/* Ajustes para el grid de servicios domóticos */
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
