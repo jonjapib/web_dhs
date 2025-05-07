@@ -360,19 +360,19 @@ footer {
 }
 
 /* Secciones de servicios individuales */
-section[id^="casa_adrian"]
+section[id^="casa_juliana"]
 {
     padding: 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.contenedor-adrian {
+.contenedor-juliana {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.contenedor-adrian h1{
+.contenedor-juliana h1{
     font-size: 2em;
     color: #33bd37;
     margin-bottom: 20px;
@@ -381,13 +381,13 @@ section[id^="casa_adrian"]
     display: inline-block;
 }
 
-.contenedor-adrian h3{
+.contenedor-juliana h3{
     font-size: 1.4em;
     color: #555;
     margin-bottom: 20px;
 }
 
-.contenedor-adrian p {
+.contenedor-juliana p {
     text-align: justify;
     max-width: 800px;
     margin: 0 auto 20px;
