@@ -86,7 +86,12 @@ nav ul li a:hover {
 }
 
 
-
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
 
 
 /* Sección de servicios */
@@ -98,55 +103,6 @@ nav ul li a:hover {
     padding: 4em 2em;
     background-color: #ffffff;
 }
-
-.card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    padding: 2em;
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.card i {
-    font-size: 3em;
-    color: #33bd37;
-    margin-bottom: 1.5em;
-}
-
-.card .info h3 {
-    font-size: 1.5em;
-    color: #33bd37;
-    margin-bottom: 1em;
-}
-
-.card .info p {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 1.5em;
-}
-
-.card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1.5em;
-    transition: all 0.3s ease;
-}
-
-.card img:hover {
-    transform: scale(1.1);
-}
-
 /* Botón de WhatsApp flotante */
 .float-whatsapp {
     position: fixed;
@@ -238,41 +194,6 @@ footer {
         font-size: 2em;
     }
     
-    /* Carrusel en móviles */
-    .slide {
-        flex-direction: column;
-        padding: 2em;
-        gap: 2em;
-    }
-    
-    .slide .text-content,
-    .slide .imagen {
-        max-width: 100%;
-        width: 100%;
-    }
-    
-    .slide .titulo {
-        font-size: 1.8em;
-        text-align: center;
-    }
-    
-    .slide .energia {
-        font-size: 1em;
-        text-align: center;
-    }
-    
-    .slide .imagen img {
-        max-height: 250px;
-    }
-    
-    .servicios {
-        padding: 2em 1em;
-        gap: 1.5em;
-    }
-    
-    .card {
-        padding: 1.5em;
-    }
 }
 
 @media (max-width: 480px) {
